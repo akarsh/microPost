@@ -9,20 +9,19 @@
 import UIKit
 
 class MicroPostDetailViewController: UIViewController {
+    
+    var content: String = ""
 
     @IBOutlet weak var contentLabel: UILabel!
-    
-    // empty dictionary
-    var post: [String: String] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        if let content = post["content"] {
-            self.contentLabel.text = content
-        }
+        self.contentLabel.text = content
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 }

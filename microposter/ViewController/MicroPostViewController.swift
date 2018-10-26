@@ -9,51 +9,73 @@
 import UIKit
 
 class MicroPostViewController: UITableViewController {
-
-
+    
+    
     @IBOutlet var microTableView: UITableView!
     
-    var posts = [["author": "akarsh", "content": "first post"], ["author": "seggemu", "content": "second post"]]
+    var posts = [post]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
         self.microTableView.dataSource = self
-        self.microTableView.delegate = self
+        //        self.microTableView.delegate = self
+        
+        self.fetchPosts { (posts) in
+            print(posts)
+            self.posts = posts
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
-
+    
+//    We are using escaping because the value needs to be escaping while it is in an other closure
+    func fetchPosts(completionHandler: @escaping ([post]) -> ()) {
+        let url = "https://micropostr-app.herokuapp.com/posts"
+        if let urlString = URL(string: url) {
+            let session = URLSession(configuration: .ephemeral)
+            let dataTask = session.dataTask(with: urlString) { (data, response, error) in
+                if let jsonData = data {
+                    let decoder = JSONDecoder()
+                    do {
+                        let posts = try decoder.decode([post].self, from: jsonData)
+                        completionHandler(posts)
+                    } catch {
+                        
+                    }
+                }
+            }
+            dataTask.resume()
+        }
+    }
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.posts.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "microPostCell", for: indexPath)
-        as! MicroPostViewCell
+            as! MicroPostViewCell
         
-        let posts = self.posts[indexPath.row]
-        
-        if let content = posts["content"], let author = posts["author"] {
-            cell.authorLabel.text = author
-            cell.titleLabel.text = content
-        }
-
+        let post = posts[indexPath.row]
+        cell.authorLabel.text = "\(post.authorID)"
+        cell.titleLabel.text = post.content
         return cell
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "microPostDetail" {
-            if let destination = segue.destination as? MicroPostDetailViewController {
-                if let indexPath = self.microTableView.indexPathForSelectedRow {
-                    let post = self.posts[indexPath.row]
-                    
-                    destination.post = post
-                }
+            let microPostDetailViewControllerDestionation = segue.destination as! MicroPostDetailViewController
+            if let rowIndex = self.microTableView.indexPathForSelectedRow?.row {
+                let post = self.posts[rowIndex]
+                microPostDetailViewControllerDestionation.content = post.content
             }
         }
     }

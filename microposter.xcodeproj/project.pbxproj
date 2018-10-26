@@ -14,6 +14,7 @@
 		9AFEA866217DEA95007641E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFEA864217DEA95007641E8 /* LaunchScreen.storyboard */; };
 		9AFEA86E217E1E80007641E8 /* MicroPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFEA86D217E1E80007641E8 /* MicroPostViewController.swift */; };
 		9AFEA870217E1F47007641E8 /* MicroPostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFEA86F217E1F47007641E8 /* MicroPostViewCell.swift */; };
+		D3452F4C21835E4500B688EE /* post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3452F4B21835E4500B688EE /* post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9AFEA867217DEA95007641E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AFEA86D217E1E80007641E8 /* MicroPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroPostViewController.swift; sourceTree = "<group>"; };
 		9AFEA86F217E1F47007641E8 /* MicroPostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroPostViewCell.swift; sourceTree = "<group>"; };
+		D3452F4B21835E4500B688EE /* post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			children = (
 				9AFEA86D217E1E80007641E8 /* MicroPostViewController.swift */,
 				9A48202B217F8592004FA13A /* MicroPostDetailViewController.swift */,
+				9AFEA86F217E1F47007641E8 /* MicroPostViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -67,15 +70,23 @@
 		9AFEA85A217DEA93007641E8 /* microposter */ = {
 			isa = PBXGroup;
 			children = (
+				D3452F4D21835ED500B688EE /* Model */,
 				9A48202A217F8568004FA13A /* ViewController */,
 				9AFEA85B217DEA93007641E8 /* AppDelegate.swift */,
 				9AFEA85F217DEA93007641E8 /* Main.storyboard */,
 				9AFEA862217DEA95007641E8 /* Assets.xcassets */,
 				9AFEA864217DEA95007641E8 /* LaunchScreen.storyboard */,
 				9AFEA867217DEA95007641E8 /* Info.plist */,
-				9AFEA86F217E1F47007641E8 /* MicroPostViewCell.swift */,
 			);
 			path = microposter;
+			sourceTree = "<group>";
+		};
+		D3452F4D21835ED500B688EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3452F4B21835E4500B688EE /* post.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A48202C217F8592004FA13A /* MicroPostDetailViewController.swift in Sources */,
+				D3452F4C21835E4500B688EE /* post.swift in Sources */,
 				9AFEA85C217DEA93007641E8 /* AppDelegate.swift in Sources */,
 				9AFEA86E217E1E80007641E8 /* MicroPostViewController.swift in Sources */,
 				9AFEA870217E1F47007641E8 /* MicroPostViewCell.swift in Sources */,
@@ -299,7 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2BXPV85T94;
+				DEVELOPMENT_TEAM = CZND2QNBTJ;
 				INFOPLIST_FILE = microposter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -317,7 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2BXPV85T94;
+				DEVELOPMENT_TEAM = CZND2QNBTJ;
 				INFOPLIST_FILE = microposter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

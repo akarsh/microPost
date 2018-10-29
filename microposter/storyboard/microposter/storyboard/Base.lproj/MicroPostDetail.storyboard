@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jyH-WD-m3d">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Micro Post Detail View Controller-->
+        <scene sceneID="XjZ-DL-13E">
+            <objects>
+                <viewController id="jyH-WD-m3d" customClass="MicroPostDetailViewController" customModule="microposter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JDd-ay-2Aw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVA-0k-F0D">
+                                <rect key="frame" x="45" y="123" width="230" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Rb4-Lx-868"/>
+                                    <constraint firstAttribute="width" constant="230" id="ZdA-Rp-Alo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HVA-0k-F0D" firstAttribute="top" secondItem="MJP-ZT-4zE" secondAttribute="top" constant="59" id="qX3-sE-BwH"/>
+                            <constraint firstItem="HVA-0k-F0D" firstAttribute="centerX" secondItem="JDd-ay-2Aw" secondAttribute="centerX" id="rSb-VE-bch"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MJP-ZT-4zE"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentLabel" destination="HVA-0k-F0D" id="B2i-rJ-fnj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmH-Y3-bWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2937.68115942029" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+</document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MicroPostDetailViewController: UIViewController {
     
@@ -23,5 +24,19 @@ class MicroPostDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        // AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        // context being accessed
+        let context = appDelegate.persistentContainer.viewContext
+        let savedPost = SavedPost(context: context)
+        // a value has been set
+        savedPost.content = self.content
+        // adding new post to the context
+        context.insert(savedPost)
+        // saveContext method
+        appDelegate.saveContext()
     }
 }

@@ -20,6 +20,10 @@
 		D3300A73218773FF0089DADC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3300A72218773FF0089DADC /* Login.storyboard */; };
 		D3300A77218774280089DADC /* MicroPostDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3300A75218774280089DADC /* MicroPostDetail.storyboard */; };
 		D3452F4C21835E4500B688EE /* post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3452F4B21835E4500B688EE /* post.swift */; };
+		D3627942218869430052A21D /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3627941218869430052A21D /* SignUp.storyboard */; };
+		D3627945218874D30052A21D /* microposter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3627943218874D30052A21D /* microposter.xcdatamodeld */; };
+		D362794721888A630052A21D /* SavedPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362794621888A630052A21D /* SavedPostTableViewController.swift */; };
+		D362796B2188C39C0052A21D /* savedPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36279692188C39C0052A21D /* savedPost.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		D3300A72218773FF0089DADC /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D3300A76218774280089DADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = microposter/storyboard/Base.lproj/MicroPostDetail.storyboard; sourceTree = "<group>"; };
 		D3452F4B21835E4500B688EE /* post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = post.swift; sourceTree = "<group>"; };
+		D3627941218869430052A21D /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		D3627944218874D30052A21D /* microposter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = microposter.xcdatamodel; sourceTree = "<group>"; };
+		D362794621888A630052A21D /* SavedPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPostTableViewController.swift; sourceTree = "<group>"; };
+		D362796A2188C39C0052A21D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = microposter/storyboard/Base.lproj/savedPost.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +62,12 @@
 		9A48202A217F8568004FA13A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9AFEA86D217E1E80007641E8 /* MicroPostViewController.swift */,
+				D3300A6E21875EC90089DADC /* LoginViewController.swift */,
 				9A48202B217F8592004FA13A /* MicroPostDetailViewController.swift */,
 				9AFEA86F217E1F47007641E8 /* MicroPostViewCell.swift */,
+				9AFEA86D217E1E80007641E8 /* MicroPostViewController.swift */,
 				D3300A6C218722BD0089DADC /* SignUpViewController.swift */,
-				D3300A6E21875EC90089DADC /* LoginViewController.swift */,
+				D362794621888A630052A21D /* SavedPostTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -82,14 +91,14 @@
 		9AFEA85A217DEA93007641E8 /* microposter */ = {
 			isa = PBXGroup;
 			children = (
-				D3300A742187740A0089DADC /* storyboard */,
-				D3452F4D21835ED500B688EE /* Model */,
-				9A48202A217F8568004FA13A /* ViewController */,
-				9AFEA85B217DEA93007641E8 /* AppDelegate.swift */,
-				9AFEA862217DEA95007641E8 /* Assets.xcassets */,
-				9AFEA864217DEA95007641E8 /* LaunchScreen.storyboard */,
+				D3627943218874D30052A21D /* microposter.xcdatamodeld */,
 				9AFEA867217DEA95007641E8 /* Info.plist */,
+				9AFEA85B217DEA93007641E8 /* AppDelegate.swift */,
 				D3300A70218773AD0089DADC /* SwitchUtility.swift */,
+				9AFEA862217DEA95007641E8 /* Assets.xcassets */,
+				D3452F4D21835ED500B688EE /* Model */,
+				D3300A742187740A0089DADC /* storyboard */,
+				9A48202A217F8568004FA13A /* ViewController */,
 			);
 			path = microposter;
 			sourceTree = "<group>";
@@ -97,9 +106,12 @@
 		D3300A742187740A0089DADC /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				9AFEA864217DEA95007641E8 /* LaunchScreen.storyboard */,
 				D3300A72218773FF0089DADC /* Login.storyboard */,
 				9AFEA85F217DEA93007641E8 /* Main.storyboard */,
 				D3300A75218774280089DADC /* MicroPostDetail.storyboard */,
+				D36279692188C39C0052A21D /* savedPost.storyboard */,
+				D3627941218869430052A21D /* SignUp.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -172,7 +184,9 @@
 			files = (
 				D3300A73218773FF0089DADC /* Login.storyboard in Resources */,
 				9AFEA866217DEA95007641E8 /* LaunchScreen.storyboard in Resources */,
+				D3627942218869430052A21D /* SignUp.storyboard in Resources */,
 				9AFEA863217DEA95007641E8 /* Assets.xcassets in Resources */,
+				D362796B2188C39C0052A21D /* savedPost.storyboard in Resources */,
 				9AFEA861217DEA93007641E8 /* Main.storyboard in Resources */,
 				D3300A77218774280089DADC /* MicroPostDetail.storyboard in Resources */,
 			);
@@ -188,11 +202,13 @@
 				D3300A6F21875EC90089DADC /* LoginViewController.swift in Sources */,
 				D3300A6D218722BD0089DADC /* SignUpViewController.swift in Sources */,
 				9A48202C217F8592004FA13A /* MicroPostDetailViewController.swift in Sources */,
+				D362794721888A630052A21D /* SavedPostTableViewController.swift in Sources */,
 				D3452F4C21835E4500B688EE /* post.swift in Sources */,
 				D3300A71218773AD0089DADC /* SwitchUtility.swift in Sources */,
 				9AFEA85C217DEA93007641E8 /* AppDelegate.swift in Sources */,
 				9AFEA86E217E1E80007641E8 /* MicroPostViewController.swift in Sources */,
 				9AFEA870217E1F47007641E8 /* MicroPostViewCell.swift in Sources */,
+				D3627945218874D30052A21D /* microposter.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +237,14 @@
 				D3300A76218774280089DADC /* Base */,
 			);
 			name = MicroPostDetail.storyboard;
+			sourceTree = "<group>";
+		};
+		D36279692188C39C0052A21D /* savedPost.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D362796A2188C39C0052A21D /* Base */,
+			);
+			name = savedPost.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -400,6 +424,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D3627943218874D30052A21D /* microposter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3627944218874D30052A21D /* microposter.xcdatamodel */,
+			);
+			currentVersion = D3627944218874D30052A21D /* microposter.xcdatamodel */;
+			path = microposter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9AFEA850217DEA93007641E8 /* Project object */;
 }

@@ -71,12 +71,29 @@
                                     <action selector="loginButtonPressed:" destination="dGD-dK-8Vq" eventType="touchUpInside" id="YfV-CJ-mFo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQH-AL-QmH">
+                                <rect key="frame" x="147.5" y="572" width="80" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="8aE-2K-Jy3"/>
+                                    <constraint firstAttribute="height" constant="30" id="NnJ-ne-xFU"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="89X-GX-azd" kind="show" id="KYl-bf-ZDl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="TQH-AL-QmH" firstAttribute="centerX" secondItem="b9K-nc-NrR" secondAttribute="centerX" id="1ox-Tj-HtM"/>
                             <constraint firstItem="aOx-LP-MXQ" firstAttribute="centerX" secondItem="b9K-nc-NrR" secondAttribute="centerX" id="8Vt-OW-IXS"/>
                             <constraint firstItem="7hW-jd-ukW" firstAttribute="bottom" secondItem="UrV-Fq-dOA" secondAttribute="bottom" constant="164" id="9cd-bX-9Hb"/>
                             <constraint firstItem="F7v-64-fZi" firstAttribute="centerX" secondItem="b9K-nc-NrR" secondAttribute="centerX" id="A18-6l-fyR"/>
+                            <constraint firstItem="7hW-jd-ukW" firstAttribute="bottom" secondItem="TQH-AL-QmH" secondAttribute="bottom" constant="65" id="FrE-LN-sAS"/>
+                            <constraint firstItem="TQH-AL-QmH" firstAttribute="top" secondItem="UrV-Fq-dOA" secondAttribute="bottom" constant="69" id="GE6-xT-MKr"/>
                             <constraint firstItem="UrV-Fq-dOA" firstAttribute="centerX" secondItem="b9K-nc-NrR" secondAttribute="centerX" id="KWI-Kg-Ew1"/>
                             <constraint firstItem="9I5-uN-Frt" firstAttribute="centerX" secondItem="b9K-nc-NrR" secondAttribute="centerX" id="MdC-l3-Pjp"/>
                             <constraint firstItem="Koa-L6-auX" firstAttribute="centerX" secondItem="b9K-nc-NrR" secondAttribute="centerX" id="Ouz-dc-bh4"/>
@@ -95,6 +112,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ru-ob-sIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1916" y="-588"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="83v-gH-bsq">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="signUpViewController" storyboardName="SignUp" id="89X-GX-azd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azN-hg-opi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2681" y="-589"/>
         </scene>
     </scenes>
 </document>

@@ -11,7 +11,7 @@ import UIKit
 class SignUpViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
-    
+
     @IBOutlet weak var passwordTextField: UITextField!
     
     
@@ -48,8 +48,11 @@ class SignUpViewController: UIViewController {
             let dataTask = session.dataTask(with: request) { (data, response, error) in
                 if let jsonData = data {
                     do {
-                        let responseJSON = try JSONSerialization.jsonObject(with: jsonData, options: []) as! [String:String]
-                        print(responseJSON)
+                        let responseJSON = try JSONSerialization.jsonObject(with: jsonData, options: []) as! [String:Any]
+                        // to switch the view to login from sign up
+                        DispatchQueue.main.async {
+                            SwitchUtility.updateViewController()
+                        }
                     } catch {
                         
                     }

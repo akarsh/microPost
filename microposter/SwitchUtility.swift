@@ -16,9 +16,9 @@ class SwitchUtility {
         
         var rootViewController: UIViewController
         if let token = UserDefaults.standard.string(forKey: "token") {
-            rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainNavigationViewController")
+            rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarViewController")
         } else {
-            rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginViewController")
+            rootViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "loginViewController")
         }
         appDelegate.window?.rootViewController = rootViewController
     }
